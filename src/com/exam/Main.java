@@ -1,7 +1,9 @@
 package com.exam;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class Main {
 
@@ -17,13 +19,16 @@ public class Main {
 				String name = tokens[1];
 				int price = Integer.parseInt(tokens[2]);
 				int kcal = Integer.parseInt(tokens[3]);
-				
+				m.f.add(new Food(i+1,name ,price ,kcal));
 			}
+			m.on();
 			
 			
-			
-		} catch (Exception e) {
-		}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}catch(IOException e){
+			e.printStackTrace();
 	}
 
+}
 }

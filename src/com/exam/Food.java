@@ -1,13 +1,15 @@
 package com.exam;
 
 public class Food {
-	public Food(String name, int price, int kcal, int total) {
+	public Food(int id, String name, int price, int kcal, int total) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.price = price;
 		this.kcal = kcal;
 		this.total = total;
 	}
+	int id;
 	String name;
 	int price;
 	int kcal;
@@ -36,4 +38,11 @@ public class Food {
 	public void setTotal(int total) {
 		this.total = total;
 	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 }
